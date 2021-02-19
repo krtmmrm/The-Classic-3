@@ -1,9 +1,20 @@
 /*******
 Global Settings 
-- Typography
 - Color Palette
+- Typography
 - Responsive
 *******/
+/*
+Color Palette
+*/
+:root{
+    --main-bg-color: #EEEFE3;
+    --main-text-color: #2C243B;
+    --main-dark-color: #2F2924;
+    --main-light-color: #717C5F;
+    --main-accent-color: #FFAA15;
+    --secondary-accent-color: #B6252F;
+}
 /*
 Typography
 */
@@ -26,18 +37,16 @@ p{
     margin-top: 1em;
 }
 h1 {
-    color:#2C243B ;
+    color: var(--main-text-color);
     font-family: main_serif;
     font-size: 4em;
     line-height: 0.9em;
 }
-/*
-Color Palette
-*/
+
 /*
 Responsive
 */
-@media screen and (max-width:768px){
+@media screen and (max-width:850px){
     body { 
         display: none;
     }
@@ -52,7 +61,7 @@ Other Settings
 Define Grid
 *******/
 .main_wrapper{
-    background-color: #EEEFE3;
+    background-color: var(--main-bg-color);
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(10, minmax(50px,200px));
@@ -134,18 +143,19 @@ Navbar
 .navbar .call_action{
     max-width: 50px;
     max-height: 30px;
-    font-size: 1em;
-    margin: 0.2em;
-    padding: 0.35em 0.35em;
-    justify-items: flex-end;
-    justify-content: flex-end;
+    font-size: 1.2em;
+    margin:  0em 0.2em;
+    padding: 0.35em 0.35em 0.35em 0em;
+    text-align: right;
+    background-color: transparent;
+    font-weight: bolder;
 }
 /*
 Content
 */
 
 .call_action{
-    background-color: #FFAA15;
+    background-color: var(--main-accent-color);
     width: 50%;
     max-width: 350px;
     min-width: 200px;
@@ -154,7 +164,7 @@ Content
     border: none;
     border-radius: 50px;
     padding: 0.75em 3em;
-    color: #2C243B;
+    color: var(--main-text-color);
     font-family: main_sansserif;
     font-weight: bolder;
     font-size: 1.2em;
@@ -167,8 +177,8 @@ Imagen
     max-width: 100%;
     max-height: 100%;
     position: absolute;
-    left: 25%;
-    top: 0%;
+    left: 0%;
+    top: 15%;
     
 }
 /*
