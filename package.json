@@ -2,7 +2,7 @@
   "name": "vanillaProject",
   "version": "1.0.0",
   "description": "",
-  "main": "controller.js",
+  "main": "static/controller/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
