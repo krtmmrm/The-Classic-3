@@ -1,3 +1,8 @@
+import Home from "./views/Home.js"
+import About from "./views/About.js"
+import Projects from "./views/Projects.js"
+import Faq from "./views/Faq.js"
+import Contact from "./views/Contact.js"
 //
 const navigateTo = url => {
     history.pushState(null, null , url);
@@ -7,11 +12,11 @@ const navigateTo = url => {
 //
 const router = async () => {
     const routes = [
-        { path: "/", view: () => console.log("Home page") },
-        { path: "/about", view: () => console.log("About page") },
-        { path: "/projects", view: () => console.log("Projects page") },
-        { path: "/faq", view: () => console.log("Faq page") },
-        { path: "/register", view: () => console.log("Register page") }
+        { path: "/", view: new Home() },
+        { path: "/about", view: new About() },
+        { path: "/projects", view: new Projects() },
+        { path: "/faq", view: new Faq() },
+        { path: "/register", view: new Contact() }
     ];
 
     //Test each route for potencial matches 
@@ -33,7 +38,9 @@ const router = async () => {
         };
     };
 
-    console.log(match.route.view());
+    const view = match.route.view
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
 };
 
 //Allows to go back and forth 

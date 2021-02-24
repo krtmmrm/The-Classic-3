@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/index.css">
+    <link rel="stylesheet" href="static/styles/index.css">
     <title>Vanilla Project</title>
 </head>
 
 <body>
     <div class="main_wrapper">
-        <div class="content_wrapper">
+        <div ></div>
+        <div class="content_wrapper" >
             <nav class="navbar">
                 <div class="logo">
-                    <img src="../static/assets/Logo-mk.png"  >
+                    <img src="static/assets/Logo-mk.png"  >
                 </div>
                 <ul class="nav_links">
                     <li><a href="/" class="nav__link" data-link>Home</a></li>
@@ -29,25 +30,21 @@
                 </div>
                 
             </nav>
-            <div class="content">
-                <h1>Let's build solutions</h1>
-                <P>Every year, an increasing number of tech professionals and engineers show interest in starting their entrepreneurial journey.</P>
-                <button class="call_action">Start now</button>
-            </div>
+            <div class="content" id="app"></div>
             <div class="image">
-                <img src="../static/assets/Character.png" >
+                <img src="/static/assets/Character.png" >
             </div>
             <div class="footer">
                 <div class="social_media">
                     <!-- Añadir links social media -->
-                    <img src="../static/assets/icons/LinkedIn.png" class="linkedin">
-                    <img src="../static/assets/icons/GitHub.png"  class="github">
-                    <img src="../static/assets/icons/Instagram.png"  class="Instagram">
+                    <img src="static/assets/icons/LinkedIn.png" class="linkedin">
+                    <img src="static/assets/icons/GitHub.png"  class="github">
+                    <img src="static/assets/icons/Instagram.png"  class="Instagram">
                 </div>
             </div>
         </div>  
     </div> 
-    <script src="../static/controller/index.js"></script>
+    <script type="module" src="static/controller/index.js" ></script>
 </body>
 
 </html>
