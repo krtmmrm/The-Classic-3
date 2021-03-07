@@ -1,7 +1,6 @@
 import Home from "./views/Home.js"
 import About from "./views/About.js"
 import Projects from "./views/Projects.js"
-import Faq from "./views/Faq.js"
 import Contact from "./views/Contact.js"
 //
 const navigateTo = url => {
@@ -15,7 +14,7 @@ const router = async () => {
         { path: "/", view: new Home() },
         { path: "/about", view: new About() },
         { path: "/projects", view: new Projects() },
-        { path: "/faq", view: new Faq() },
+        { path: "/contact", view: new Contact() },
         { path: "/register", view: new Contact() }
     ];
 
