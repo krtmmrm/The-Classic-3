@@ -11,6 +11,13 @@ input,
 textarea {
   font-family: "Poppins", sans-serif;
 }
+
+
+
+/*
+FORM SIDE
+*/
+
 .container {
     position: relative;
     width: 100%;
@@ -43,6 +50,7 @@ textarea {
     background-color: #1abc9c;
     position: relative;
 }
+
 .contact_form:before {
   content: "";
   position: absolute;
@@ -143,20 +151,20 @@ textarea.input {
   right: 50%;
 }
 
-.input-container.focus label {
+.input-container:focus-within label{
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
 }
 
-.input-container.focus span:before,
-.input-container.focus span:after {
+.input-container:focus-within span:before,
+.input-container:focus-within span:after {
   width: 50%;
   opacity: 1;
 }
-.input-container.focus span:before,
-.input-container.focus span:after {
+.input-container:focus-within span:before,
+.input-container:focus-within span:after {
   width: 50%;
   opacity: 1;
 }
@@ -178,4 +186,138 @@ textarea.input {
 .btn:hover {
   background-color: transparent;
   color: #fff;
+}
+
+
+
+
+/*
+INFORMATION SIDE
+*/
+
+.contact_info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+}
+
+div.contact_info h3.title{
+  color: #1abc9c;
+}
+.text {
+  color: #333;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.information {
+  display: flex;
+  color: #555;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.icon {
+  width: 28px;
+  margin-right: 0.7rem;
+}
+.social_media {
+  padding: 2rem 0 0 0;
+}
+
+.social_media p {
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #1abc9c, #149279);
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+
+
+/*
+RESPONSIVE SIZING
+*/
+@media (max-width: 850px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact_info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact_form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .social_media {
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .contact_info:before {
+    display: none;
+  }
+  
+  form,
+  .contact_info {
+    padding: 1.7rem 1.6rem;
+  }
+
+  .text,
+  .information,
+  .social-media p {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .icon {
+    width: 23px;
+  }
+
+  .input {
+    padding: 0.45rem 1.2rem;
+  }
+
+  .btn {
+    padding: 0.45rem 1.2rem;
+  }
 }
