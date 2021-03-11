@@ -13,6 +13,9 @@ export default class extends AbstractView {
                 <P>Every year, an increasing number of tech professionals and engineers show interest in starting their entrepreneurial journey.</P>
                 <button class="call_action">Start now</button>
             </div>
+            <div class="image">
+            <img src="../../assets/Character.png" >
+            </div>
         `;
     }
 }
